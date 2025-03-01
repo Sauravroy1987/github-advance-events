@@ -11,7 +11,7 @@ on:
     branches:
       - "master"
       - "Dev"
-    path-ignore: # Ignore the execution of workflow, if delivery happen on below paths
+    paths-ignore: # Ignore the execution of workflow, if delivery happen on below paths
       - ".github/workflows/*" # Workflow will not trigger if any push happen in path '.github/workflow/'
     # paths:
     # - ".github/workflows/*" # Opposite, workflow will only execute if push happened on the files path '.github/workflow/'
