@@ -12,9 +12,9 @@ on:
       - "master"
       - "Dev"
     path-ignore: # Ignore the execution of workflow, if delivery happen on below paths
-      - ".github/workflow/*" # Workflow will not trigger if any push happen in path '.github/workflow/'
+      - ".github/workflows/*" # Workflow will not trigger if any push happen in path '.github/workflow/'
     # paths:
-    # - ".github/workflow/*" # Opposite, workflow will only execute if push happened on the files path '.github/workflow/'
+    # - ".github/workflows/*" # Opposite, workflow will only execute if push happened on the files path '.github/workflow/'
 jobs:
   deploy:
     runs-on: ubuntu-latest
