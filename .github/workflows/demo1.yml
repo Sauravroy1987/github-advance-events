@@ -5,14 +5,14 @@ on:
       - opened #Workflow will trigger when a pull(Merge) request create(Dev Branch -> Development Branch) in this repository
       # - edited #Workflow will trigger when a pull(Merge) request edited in this repository
     branches:
-      - "master"
+      - "master" # Pull(merge) request target branch should be master, then workflow will execute
   workflow_dispatch:
   push:
     branches:
       - "master"
       - "Dev"
     paths-ignore: # Ignore the execution of workflow, if delivery happen on below paths
-      - ".github/workflows/*" # Workflow will not trigger if any push happen in path '.github/workflow/'
+      - ".github/workflows/*" # Workflow will not trigger if any files push happen in path '.github/workflow/'
     # paths:
     # - ".github/workflows/*" # Opposite, workflow will only execute if push happened on the files path '.github/workflow/'
 jobs:
