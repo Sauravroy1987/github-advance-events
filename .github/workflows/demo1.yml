@@ -1,5 +1,10 @@
 name: Events Demo 1
-on: ...
+on:
+  pull_request:
+    types:
+      - opened #Workflow will trigger when a pull request trigger in this repository
+      - edited #Workflow will trigger when a pull request edited in this repository
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
